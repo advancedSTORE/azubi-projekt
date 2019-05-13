@@ -2,15 +2,17 @@
 
 #### Beschreibung
 
-Bitte ein Programm schreiben, welches sich Programm aus einem Partner Netzwerk über eine API zieht, diese neu mapt und in ein JSON Format abspeichert. 
+Bitte ein Programm schreiben, welches die aktiven Programme aus einem Partner-Netzwerk (Adcell) über eine API zieht.
+Diese müssen dann neu gemappt werden und danach im JSON-Format lokal abgespeichert werden.
 
 
 #### technischer Stack
 * git
-* node oder java
+* node / java / php
 
 
 #### API 
+Die Api-Doku für das Netzwerk findest du hier:
 https://www.adcell.de/api/v2/
 
 id => 214955 / key  => 3KoL%m7uQ
