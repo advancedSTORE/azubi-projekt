@@ -1,0 +1,35 @@
+  <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/post.css">
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+        <main class="main">
+          <% if (psts.length > 0) { %>
+          <div class="news-wrap">
+            <h3 class="news-headline">
+              Blog Post will Be Below
+            </h3>
+            <% for (let post of psts) { %>
+            <!-- Blog Post Start -->
+            <div class="post-form">
+              <div class="post-form__example">
+                <h2 class="post__title">
+                  <%= post.title %>
+                </h2>
+                <p id="post_date-author">
+                  "<%= post.date %> by <%= post.author %>"
+                </p>
+                <hr />
+                <p>
+                  <%= post.text %>
+                </p>
+              </div>
+            </div>
+            <% } %>
+            <!-- Blog Post End -->
+          </div>
+      <% } else { %>
+        <h1>No Products Found!</h1>
+      <% } %>
+      </main>
+    <%- include('includes/end.ejs') %>
