@@ -10,19 +10,20 @@ exports.getAddPost = (req, res, next) => {
     // activeAddPost: true
   });
 };
+
 exports.postAddPost = (req, res, next) => {
-  const post = new Post(
-    req.body.title,
-    postDate,
+  const post = new Post( // neues Element der Klasse Post erstellen
+    req.body.title, // Properties aus der Product-Form speichern
+    postDate, // Datum aus der postDate Util
     req.body.author,
     req.body.text
   );
-  post.save();
+  post.save(); // push
   res.redirect('/');
 };
 
 exports.getPosts = (req, res, next) => {
-  const posts = Post.fetchAll();
+  const posts = Post.fetchAll(); // gibt alle Posts aus; siehe Model
   res.render('news', {
     psts: posts,
     pageTitle: 'advanced news',
