@@ -7,6 +7,7 @@ const person = props => {
         I'm {props.name} and {props.age} years old!
       </p>
       <p>{props.children}</p>
+      {/* Input Feld mit Two Way binding um  den aktuellen wert anzuzeigen */}
       <input type="text" onChange={props.changed} value={props.name} />
     </div>
   );
